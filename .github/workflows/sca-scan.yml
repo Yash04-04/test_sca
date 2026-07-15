@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - main
-  push:
-    branches:
-      - main
 
 jobs:
   sca-scan:
@@ -17,14 +14,14 @@ jobs:
 
       - name: Run SCA scan
         env:
-          SCA_API_URL: "https://api.your-sca-backend.example.com"
+          SCA_API_URL: "https://skimpily-talcum-tall.ngrok-free.dev"
           SCA_API_TOKEN: ${{ secrets.SCA_API_TOKEN }}
         run: |
           docker pull public.ecr.aws/e9l9t5a0/sca-public:latest
-          docker run --rm \
-            -v "${{ github.workspace }}":/workspace \
-            -e SCA_API_URL \
-            -e SCA_API_TOKEN \
-            public.ecr.aws/e9l9t5a0/sca-public:latest \
+          docker run --rm
+            -v "${{ github.workspace }}":/workspace
+            -e SCA_API_URL
+            -e SCA_API_TOKEN
+            public.ecr.aws/e9l9t5a0/sca-public:latest
             --input /workspace --output /workspace/sca-report.json --fail-on HIGH
 
