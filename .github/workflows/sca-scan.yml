@@ -1,6 +1,9 @@
 name: SCA Scan
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -18,10 +21,10 @@ jobs:
           SCA_API_TOKEN: ${{ secrets.SCA_API_TOKEN }}
         run: |
           docker pull public.ecr.aws/e9l9t5a0/sca-public:latest
-          docker run --rm
-            -v "${{ github.workspace }}":/workspace
-            -e SCA_API_URL
-            -e SCA_API_TOKEN
-            public.ecr.aws/e9l9t5a0/sca-public:latest
+          docker run --rm \
+            -v "${{ github.workspace }}":/workspace \
+            -e SCA_API_URL \
+            -e SCA_API_TOKEN \
+            public.ecr.aws/e9l9t5a0/sca-public:latest \
             --input /workspace --output /workspace/sca-report.json --fail-on HIGH
 
