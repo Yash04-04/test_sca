@@ -1,3 +1,5 @@
+# test secret - generic API key
+# SECRET_KEY=testkey_51H8xyzFAKENOTREALdoNotUse00000000
 version: '3'
 services:
   backend:

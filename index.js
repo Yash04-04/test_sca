@@ -1,3 +1,5 @@
+// test secret - GitHub PAT
+const GITHUB_TOKEN = "ghp_1234567890EXAMPLEFAKETOKENabcdef";
 const marked = require('marked');
 const bodyParser = require('body-parser');
 const ip = require('ip');
