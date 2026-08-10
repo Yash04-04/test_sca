@@ -1,5 +1,7 @@
 package com.acme.foo;
 
+// test secret - Slack webhook token
+// SLACK_TOKEN = "xoxb-fake-000000000000-TESTNOTREAL0000000000"
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
