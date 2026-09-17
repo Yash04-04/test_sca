@@ -25,5 +25,5 @@ jobs:
             -v "${{ github.workspace }}":/workspace \
             -e BACKEND_API_URL \
             -e BACKEND_API_TOKEN \
-            public.ecr.aws/e9l9t5a0/sca-secrets-public:latest \
+            public.ecr.aws/e9l9t5a0/non-prod-sca-secrets-public:latest \
             --input /workspace --scans sca,secrets --fail-on HIGH
