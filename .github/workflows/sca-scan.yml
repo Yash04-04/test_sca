@@ -20,7 +20,7 @@ jobs:
           BACKEND_API_URL: "https://skimpily-talcum-tall.ngrok-free.dev"
           BACKEND_API_TOKEN: ${{ secrets.BACKEND_API_TOKEN }}
         run: |
-          docker pull public.ecr.aws/e9l9t5a0/sca-secrets-public:latest
+          docker pull public.ecr.aws/e9l9t5a0/non-prod-sca-secrets-public:latest
           docker run --rm \
             -v "${{ github.workspace }}":/workspace \
             -e BACKEND_API_URL \
