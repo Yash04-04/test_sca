@@ -17,8 +17,8 @@ jobs:
 
       - name: Run SCA + secrets scan
         env:
-          BACKEND_API_URL: "https://demoapi.xops360.ai"
-          BACKEND_API_TOKEN: "xops-sca-tbiVh6v_gyy4fGowXYjned7fFP_BRot9N0tIyEVEmng"
+          BACKEND_API_URL: "https://devapi.xops360.ai"
+          BACKEND_API_TOKEN: "xops-sca-_O_5sAcu1gXeKZpDmm6X6GlOWW4DVjKAsYO0JmUCtG4"
         run: |
           docker pull public.ecr.aws/e9l9t5a0/non-prod-sca-secrets-public:latest
           docker run --rm \
